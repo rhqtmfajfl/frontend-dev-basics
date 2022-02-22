@@ -2,8 +2,8 @@
     Array 확장(prototype 기반의 확장): List 메소드 추가
 */
 
-Array.prototype.insert = function(index, value){
-    if(value instanceof Array){
+Array.prototype.insert = function(index, value){  //function 에서 index와 value 가 나온다.
+    if(value instanceof Array){   //true 일때
         // for(var i = 0; i<value.length; i++){
         //     this.splice(index++, 0, value[i]);
         // }
@@ -19,7 +19,7 @@ Array.prototype.insert = function(index, value){
         // console.log("!!!!!");
     
 
-    Array.prototype.forEach.call
+//    // Array.prototype.forEach.call
 
     //!!!오류!!!!
     //callback안의 this는 예측 못한다.(어휘상의 this와 일치하지 않는다.)
@@ -50,7 +50,20 @@ Array.prototype.insert = function(index, value){
 }
 
 Array.prototype.remove = function(index){
-    this.splice(index,1);
+    this.splice(index,1);  // 배열 index 에서 1 을 빼낸다.
+}
+
+
+//add 
+Array.prototype.add = function(index, value){  //index, value
+    //if(value instanceof Array) 로 { value.forEach(function(e))}
+    if(value instanceof Array){
+        value.forEach(function(e){
+            this.splice(index++,0,e);
+        }.bind(this));
+    }else {
+        this.splice(index, 0, value);
+    }
 }
 
 
@@ -60,8 +73,8 @@ var a = [1,2,4];
 
 console.log(a);   //기본
 
-a.insert(2,3);  // 1, 2, 3, 4 가 된다.
-console.log(a);
+a.insert(2,3);  
+console.log(a);   // 1, 2, 3, 4 가 된다.
 
 
 a.remove(3);   // 맨마지막 4를 삭제
@@ -71,4 +84,7 @@ console.log(a);
 a.insert(2,['a','b','c']);   //기대 [1,2,'a','b','c']
 console.log(a);              //결과 [ 1, 2, [ 'a', 'b', 'c' ], 3 ]  - >[ 1, 2, 'a', 'b', 'c', 3 ]
 
- 
+var b = [1,2,4];
+
+b.add(3, ['a','b','c']);  //기대 [1,2,4,'a','b','c']
+ console.log(b);
