@@ -15,6 +15,7 @@ var o1 = new Object();
 
 o1.name = '둘리';
 o1.age = 10;
+
 o1.another = new Object();  //another 객체를 새로 만든다.
 o1.another.name = '마이클';
 o1.another.age = 30;
@@ -24,7 +25,7 @@ console.log(o1);   //{ name: '둘리', age: 10, another: { name: '마이클', ag
 
 //사용자 정의 생성자 함수
 
-var MyObject = function(name){
+var MyObject = function(name){  //function 안에 name이라는 파라미터 작성
     this.name = name;  //객체의 인스턴스 변수를 초기화 하는것에 의의
 }
 
@@ -92,3 +93,6 @@ i.displayInfo = function() {
 var response = '{name: "둘리", age:10, email:"dooly@gmail.com"}'; 
 var userVo = eval("(" + response + ")");    // eval 자바 스크립트를 실행해주는 코드  response는 ({name: "둘리", age:10, email:"dooly@gmail.com"}) 이거를 실행 시킨것
 console.log(userVo.name, userVo.age, userVo.email);
+
+
+

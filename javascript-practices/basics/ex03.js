@@ -17,9 +17,9 @@ i는 10이라는 값이 들어간다.
 */
 
 
-var myVar1 = undefined;  //명시적으로 undefined를 대입을 한 것이다.
+var myVar1 = undefined;  //명시적으로 undefined를 대입을 한 것이다.    //var은 scope 적인 의미이고
 var myVar2;              //암시적으로 undefined가 대입이 된다. myVar1과 같이 명시적으로 안적어도 undefined 대입된다. 명시적으로 된다.
-var myVar3 = null;       //
+var myVar3 = null;       // 
 
 
 console.log(myVar1 + ":" + myVar3);

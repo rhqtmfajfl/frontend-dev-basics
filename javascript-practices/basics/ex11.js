@@ -1,5 +1,5 @@
 /**
- * Array 메소드(Array.prototype)
+ * Array 메소드(Array.prototype.*)
  */
 
 
@@ -21,8 +21,8 @@ var color = colors.pop();
 console.log(color, colors);  //yello [ 'red', 'white' ]
 
 
-colors.push('red');
-console.log(colors);
+colors.push('red');   //apple:banana:mango
+console.log(colors);   //[ 'red', 'white', 'red' ]
 
 // join
 var str = fruits.join(":")

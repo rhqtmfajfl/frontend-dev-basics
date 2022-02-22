@@ -19,11 +19,12 @@ console.log(a1);
 
 var color = colors.pop();
 console.log(color, colors); // 예상 결과 color에는 yello가 빠져 나와 진다. -> 결과는 yello가 출력
-//colors는 red white yello 그대로 있다. 색깔 배열이 나온다.
+//colors는 red white yello가 빠져나오고 red와 white만 남는다.
 
 
 colors.push('red'); 
 console.log(colors); // 예상 결과 파이썬에서는 red가 중복되므로 안들어가지는데
 //여기서는 어떻게 될까?
 
-// 결과  -> 
+// 결과  -> [ 'red', 'white', 'red' ]
+

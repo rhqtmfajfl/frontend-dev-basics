@@ -82,7 +82,13 @@ console.log(i);
 console.log(j); // hoisting된 j 가 그대로 있는다.
 console.log(k);
 
+
+/*
 o = 10;
 o;
+var p; //이거는 에러가 나타나지 않는다. p라는 이름의 variable을 저장해라는 구문이기 때문에 에러가 발생하지 않는다.
+//p; //문법에러는 아니고 reference를 잘못했다고 실행에러가 나타난다.
+*/
 
-p; //문법에러는 아니고 reference를 잘못했다고 실행에러가 나타난다.
+
+

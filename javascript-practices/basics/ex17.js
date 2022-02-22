@@ -63,3 +63,6 @@ f2('hi', '');
 //파라미터가 있는 경우에 call을 쓰는게 좋다.
 f2.call(o,"hi", 'again');
 // f2.call(o,"hi");
+
+//파라미터가 없는 경우에 apply를 사용한다.
+f2.apply(o, ['hi','again']);

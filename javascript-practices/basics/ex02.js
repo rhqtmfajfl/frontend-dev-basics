@@ -14,6 +14,8 @@
             Boolean() => object type
             Object() => object type
             Array() => object type
+            Date() => object Type
+            Function() => object type
     2. {}   객체 리터럴, JSON(Java Script Object Notation)
     3. []   배열 리터럴
     4. null
@@ -25,6 +27,24 @@
     3. var f = new Function(...);
 
 자바스크립트는 타입은 총 6개가 있다 앞에 4개는 기본타입이고 뒤에 두개는 객체 타입이다.
+*/
+
+
+/*
+     자바스크립트 객체를 구분하는 또 다른 방법
+    1. 내장(Build-in, Nitve, Engine) 객체
+        자바스크립트 엔진 안에 미리 내장 되어 있는 객체
+        Number, Boolean, Date, RegExp, ... : 생성자 함수
+        setTimeout, parseInt, ...          : 일반 함수
+    2. 호스트 객체
+        자바스크립트 엔진이 임배드 된 환경(호스트)의 객체
+        - 호스트 환경이 브라우저라면: dom은 document라는 이름으로 접근하는거고 주소창은 location으로 접근 한다. , XmlHttpRequest, Window, ...
+        - 호스트 환경이 노드(node.js)라면 : os,  http, fs, path, ...
+
+    3. 사용자 객체
+        자바스크립트 엔진이 실행되면서 생성되는 객체들...
+
+
 */
 
 
@@ -132,6 +152,13 @@ console.log(i + i2);  //i= 10 i2 =1
 console.log(s + s2);  // Hello World Hello World
 
 
+
+// 원시 타입에 메소드가 호출 될 때 ,
+// 임시  Wrapper 객체가 만들어져 메소드 호출이 일어난뒤 사라진다.  .. 유사객체라고 한다.
 console.log("***원시타입도 메소드 호출이 가능하다?********************");
-console.log(b.valueOf());  //b == true가 들어있는 값인데도 valueOf() 메소드 사용가능
+console.log(b.valueOf());  //b == true가 들어있는 값인데도 valueOf() 메소드 사용가능  // 메소드를 사용하게 되면 b 를 잠시 객체로 만든다.
+// JSEngine 안에서 new boolean(b) .valueOf(); 값을 호출하고 사라지게 된다.  new boolean을 유사 객체라고 한다.
+// 
+
+
 console.log(b2.valueOf()); 

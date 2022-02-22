@@ -9,10 +9,12 @@ var myFunction = function(){
 }
 
 
-myFunction();
+myFunction();  // 함수가 출력된다. 일반함수
+
+
 // 생성자 함수(실행코드[객체초기화] 블록이 있는 객체, 관례에 따라 대문자로 시작)
 
-var MyObject = function(name, age){
+var MyObject = function(name, age){  //두개의 파라미터 받고
     this.name = name;
     this.age = age;
 }

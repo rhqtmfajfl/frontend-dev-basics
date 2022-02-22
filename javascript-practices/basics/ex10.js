@@ -24,7 +24,7 @@ console.log(a2[0],a2[1], a2.length); //배열 요소에 값을 지정안하면 u
 
 //초기값을 지정할 수 있다.
 var a3 = new Array(0, 2, 4, 6, 8);
-console.log(a3.length);
+console.log(a3.length);  //5개
 
 
 // 배열 생성2: 리터럴을 사용하기

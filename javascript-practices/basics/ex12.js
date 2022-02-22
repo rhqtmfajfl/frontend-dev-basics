@@ -23,7 +23,7 @@ Array.prototype.insert = function(index, value){
 
     //!!!오류!!!!
     //callback안의 this는 예측 못한다.(어휘상의 this와 일치하지 않는다.)
-    //value.forEach(cuntion(e))
+    //value.forEach(funtion(e))   //value는 forEach를 호출하는 것이다.  forEach문안에서의 value는 this 이다.
     //        this.splice(index++, 0, e);
     //    }
     
@@ -33,7 +33,7 @@ Array.prototype.insert = function(index, value){
         //{_this.splice(index__, 0 ,e)}
     // });
 
-
+    
     /// 해결방법 2: 함수의 bind로 실행 때의 this를 세팅해 줄 수 ㅣㅇㅆ다.
 
        value.forEach(function(e){   //이거를 더 선호

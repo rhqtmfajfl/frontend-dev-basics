@@ -44,7 +44,8 @@ i2.another = {
 };
 
 
-console.log(i2);  //예상
+console.log(i2);  //예상  x
+// 결과 [Number:10]{another:{name:'마이콜',age:30}}
 
 i1.another ={};  //new Number(i1).another = {}   -> 이게 잠시 생성됬다가 사라진다.
 console.log(i1.another);  // 결과 undefined
