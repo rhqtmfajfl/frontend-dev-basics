@@ -29,7 +29,9 @@ f.another = {
     age : 30
 };
 
-console.log(f);
+console.log(f);   // 예상 hello world name: '마이콜', age:30
+//  -> [Function: f]{another:{name:'마이콜', age:30}}
+
 
 
 console.log("========기본 타입(primitive type)은 확장 되지 않는다.====================");
@@ -42,7 +44,7 @@ i2.another = {
 };
 
 
-console.log(i2);
+console.log(i2);  //예상
 
-i1.another ={};  //new Number(i1).another = {}
-console.log(i1.another);
+i1.another ={};  //new Number(i1).another = {}   -> 이게 잠시 생성됬다가 사라진다.
+console.log(i1.another);  // 결과 undefined
