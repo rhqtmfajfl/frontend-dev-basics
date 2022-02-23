@@ -3,9 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+	window.addEventListener("load",function(){
+	var imgElement =    document.createElement("img");		
+	imgElement.src = "https://c.tenor.com/6ErHI86zRcoAAAAC/%EB%AC%B4%EC%A7%80.gif";
+	imgElement.style.width = "200px";
+	imgElement.alt = "muji";
+	imgElement.title = "muji다";
+	setTimeout(function(){
+		document.body.appendChild(imgElement)
+	}, 2000);
+	
+});
+</script>
 </head>
 <body>
 	<h1 id='h' data-no='10'>DOM(Document Object Model)</h1>
 	<h2>3. HTML Element 속성 조작하기1</h2>
+	
 </body>
 </html>
