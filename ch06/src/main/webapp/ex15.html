@@ -3,6 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+/*
+ * 기본 이벤트 핸들러 동작 막기
+ 1. anchor: 버튼이나 메뉴로 사용하는 경우(click event)
+ 2. form: validation(submit event)
+ 
+ 15번 예제에서는 직접 submit 을 하는것이다.
+ */
+  
+ window.addEventListener("load", function(){
+
+		var form = document.getElementById("form-login");
+		form.addEventListener('submit', function(){
+			event.preventDefault();
+			
+			
+			var inputEmail = document.getElementById("input-email");
+			if(inputEmail.value == ''){
+				alert('이메일이 비어 있습니다.');
+				inputEmail.focus();
+				return;
+			}
+			
+			var inputPassword = document.getElementById("input-password");
+			if(inputPassword.value == ''){
+				alert("비밀번호가 비어 있습니다.");
+				inputPassword.focus();
+				return;
+			}
+			
+			//여기까지 오면은 validation success가 되었다는 의미이다
+			//validation success
+			this.submit();  // this에 submit() 하는 메소드가 있다.		
+			
+			
+			
+		});
+		
+	
+ });
+</script>
 </head>
 <body>
 	<h1>DOM(Document Object Model)</h1>
