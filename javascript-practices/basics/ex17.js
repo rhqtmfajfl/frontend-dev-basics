@@ -54,7 +54,7 @@ f1.apply(o);
 console.log("==  function의 객체 메소드 call============================");
 
 var f2 = function(s1, s2){
-    console.log(s + " " + this.name);
+    console.log(s1 + " " + s2 + " " +this.name);
 
 }
 

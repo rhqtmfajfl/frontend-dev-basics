@@ -8,7 +8,8 @@ function f1(a,b){
     return a + b;
 }
 
-console.log(typeof(f1), f1(10,20));
+console.log(typeof(f1), f1(10,20)); //f1함수를 사용 하여 
+//a에는 10 b 에는 20이 들어가도록 한다.
 
 
 // 함수를 생성하는 방법2 : 함수 리터럴(추천)
@@ -28,7 +29,7 @@ console.log(typeof(f3), f3(10,20));
 setTimeout(function(){
     console.log("time out!");
 
-}, 2000)
+}, 2000);
 
 
 // 즉시 실행하는 함수
@@ -38,7 +39,7 @@ var s = (function(a,b){
     return a/10 + b/10;
 })(10,20);
 
-console.log(s);
+console.log("s : " + s);
 
 // var i1 =10;
 
@@ -58,10 +59,18 @@ console.log(s);
 
 // var result = (i1 + i2 ....)/10
 
+//가변인지 함수는 매개변수의 최대 갯수가 지정되지 않은 함수를 의미합니다.
+//sum(10, 20, 30,...);
+
+//가변인자 함수를 이용해 위와 같이 인자의 갯수 제한이 없는 함수를 작성할 수 있다.
+
+
+
 
 //가변 파라미터 함수  
 //함수 파라미터 안에는 argument가 내장이 되어있다. arguments는 접근이 가능
 var sum = function(){
+    console.log("arguments.length : " + arguments.length)
     console.log(arguments instanceof Array, arguments.length); // Array가 아니다! 유사 배열
 
     var sum = 0;
@@ -76,6 +85,7 @@ var sum = function(){
 
     Array.prototype.forEach.call(arguments, function(e){        //함수 객체는 call이 가능하다.
         sum += e;
+        console.log("sum : " + sum);
     });
 
 

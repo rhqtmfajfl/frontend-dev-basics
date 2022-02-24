@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="jquery/jquery-simple.js"></script>
+<script>
+$(function() {
+	var $obj = $(".par");  //이함수가 실행하는데 stinrg.par이다. function이 아니니까 9번라인이 실행  
+	//그러면 elements가 실행된다. element가  par의 p 엘레먼트가 배열로 들어가 있따. document.querySelectorAll(param); 이게 하는일이다.
+	// elements 가  _jQuery 실행
+	
+	/**
+	var _jQuery = function(elements) {
+	this.length = elements.length;
+	for(var i = 0; i < elements.length; i++) {
+		this[i] = elements[i];		
+	}
+	여기서 elements가 들어가서 this[i] 배열에 생성된다.
+	*/
+	
+	//프로토 타입은  jquery css click을 공유 한다.
+	
+	//
+	
+	/*
+	_jQuery.prototype.click = function(handler) {
+	for(var i = 0; i < this.length; i++){
+		this[i].addEventListener('click', handler);
+	}	
+	
+	*/
+	
+	$obj.click(function(){
+		console.log("clicked:" + this);
+	});
+	
+	setTimeout(function(){
+		$obj.css('color', 'red');
+	}, 2000);
+});
+
+// 위의 함수를 		window.addEventListener('load', param);
+//여기에 넣는다. 		window.addEventListener('load', param); {}
+
+</script>
+</head>
+<body>
+	<h1 id="header">Simple jQuery 만들기1</h1>
+	
+	<p class='par'>문장1</p>
+	<p>문장2</p>
+	<p  class='par'>문장3</p>
+	<p>문장4</p>
+</body>
+</html>
+ 

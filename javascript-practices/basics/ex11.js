@@ -68,8 +68,8 @@ console.log(a3, a1);  //예상 [0 10] [3,4]
 console.log(a2, a1);  //[ 1, 2, 3 ] [ 0, 10, 4 ]
 
 //a1.removeAt(1)
-var a1 = [0,1,2,3,4];
-var a2 = a1.splice(1,1);
+var a1 = [0,1,2,3,4];   
+var a2 = a1.splice(1,1);   // [0,1,2,3,4] 에서 1 만 나온다.
 console.log(a2, a1);   //[ 1 ] [ 0, 2, 3, 4 ]
 
 //a1.insertAt(1, 10)
