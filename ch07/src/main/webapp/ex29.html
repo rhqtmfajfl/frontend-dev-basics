@@ -6,7 +6,16 @@
 <script type="text/javascript">
 $(function() {
 	setTimeout(function(){
+		$("h2, p")
+			.wrapAll("<div>")
+			.parent()			//traverse API 이다  traverse api란?
+			.css({
+				border:"2px solid #ccc",
+				width:"200px",
+				padding:"10px"
+			});
 	}, 2000);
+
 });  
 </script>
 </head>

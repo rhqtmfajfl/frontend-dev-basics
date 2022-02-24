@@ -30,6 +30,8 @@ _jQuery.prototype.click = function(handler) {
 	for(var i = 0; i < this.length; i++){
 		this[i].addEventListener('click', handler);  //엘러먼트 basic읨 add 엘러먼ㄷ트
 	}	
+	
+	//return this; // chain이 걸릴수 있게 해주 수 있따.
 }
 
 

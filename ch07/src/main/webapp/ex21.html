@@ -6,15 +6,24 @@
 <script>
 $(function(){
 	setTimeout(function(){
+		var html = "<strong>" +  "가나다라" + "</strong>";
+		
+		$("#p1").prepend(html);  //밖에서 가나다라를 안의 p 에 붙인다.
+	
+		
+		var htms = "<strong>" + "카타파하" + "</strong>";
+		
+		$("#p1").append(htms);
+	
 	}, 1000);
 });
 </script>
 </head>
 <body>
-	<h1>DOM 조작 API - prepend()</h1>
+	<h1>DOM 조작 API - prepend(), append()</h1>
 	
 	<p id="p1">
-		가다나라마바사아자차
+		마바사아자차
 	</p>
 </body>
 </html>
