@@ -55,7 +55,7 @@
 				<version>1.1</version>
 				<configuration>
 					<url>http://127.0.0.1:8080/manager/text</url>
-					<path>/mysite03</path>
+					<path>/basics</path>
 					<username>admin</username>
 					<password>manager</password>
 				</configuration>
@@ -70,5 +70,6 @@
 		<module>ch05</module>
 		<module>ch06</module>
 		<module>ch07</module>
+		<module>ch08</module>
 	</modules>
 </project>
