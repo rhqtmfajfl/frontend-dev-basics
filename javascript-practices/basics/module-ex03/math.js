@@ -3,7 +3,8 @@
  * 
  */
 
-exports.PI = 3.14;    PI: 3.14,
+exports.PI = 3.14;   
+//  PI: 3.14,
     // sum: function(){
     //     var sum = 0;
     //     Array.from(arguments).forEach(function(e){
@@ -31,4 +32,3 @@ exports.min =  function() {
         return min;
     }
 
-}

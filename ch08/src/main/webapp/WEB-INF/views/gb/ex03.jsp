@@ -98,6 +98,8 @@ $(function() {
 		event.preventDefault();
 		
 		var no = $(this).data("no");
+		console.log("=======================")
+		console.log("no 다 :" + no);
 		$("#hidden-no").val(no);
 		dialogDelete.dialog('open');
 	});
