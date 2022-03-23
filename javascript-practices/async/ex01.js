@@ -1,4 +1,4 @@
-const ex01 = function(param, callback){  //url로 요청을 했을 때  
+const fetch = function(param, callback){  //url로 요청을 했을 때  
     //예제 때문에 만든 비동기 예제 ex01
     //
     //비동기 코드 : 파일 시스템 접근, 네트워크 통신, SQL to DB, 그래서 여기서는 setTimeout을 사용한다.
@@ -33,18 +33,18 @@ const ex01 = function(param, callback){  //url로 요청을 했을 때
 
 //test01: success
 //ex01 비동기 함수를 부를때 param을 넣고 function 함수를 error를 넣어주면
-ex01('param-data', function(error,res){
-    if(error){
+fetch('param-data', function(error, res){
+    if(error) {
         console.error(error);
-    }else{
-        console.log(res)
+    } else {
+        console.log(res);
     }
 });
 
 
 //test02: fail
 
-ex01('param-error', function(error, res){
+fetch('param-error', function(error, res){
     if(error){
         console.error(error);
     }else{
@@ -59,3 +59,24 @@ ex01('param-error', function(error, res){
 console.log("wait....");
 
 //wait 먼저 나오고 ok 나오고 fail 나오게 도니다.
+
+
+
+
+
+//
+
+// res = ex01('');
+// console.log(res);
+// console.log("wait....");
+
+
+res1 = fetch();
+if(res1 == 'error'){
+    end();
+}
+
+res2 = fetch();
+if(res2 == 'error'){
+    end();
+}
